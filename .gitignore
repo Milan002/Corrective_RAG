@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+.env*/
+
+# Environment variables file
+.env
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+!agent.ipynb  # keep this notebook tracked if desired (remove ! to ignore)
+
+# Logs
+logs/
+*.log
+
+# Mypy / Pyre / Pytype
+.mypy_cache/
+.pyre/
+.pytype/
+
+# VSCode
+.vscode/
+
+# Chroma / vector store local data
+chroma/
+*.sqlite3
+
+# Misc
+.DS_Store
