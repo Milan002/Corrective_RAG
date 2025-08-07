@@ -41,10 +41,6 @@ htmlcov/
 .cache
 pytest_cache/
 
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
-!agent.ipynb  # keep this notebook tracked if desired (remove ! to ignore)
 
 # Logs
 logs/
