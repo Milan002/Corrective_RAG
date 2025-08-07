@@ -12,6 +12,9 @@ An experimental Retrieval-Augmented Generation (RAG) workflow that builds an int
 - Composed as a graph using `langgraph` for clarity and extensibility
 
 ## Architecture Overview
+
+![Corrective RAG Architecture](images/CRAG.png)
+
 1. Load knowledge base pages listed in `agent_graph.py` (`KNOWLEDGE_BASE_URLS`).
 2. Split documents into embeddings-ready chunks (`RecursiveCharacterTextSplitter`).
 3. Store & embed chunks in **Chroma** using `OpenAIEmbeddings`.
@@ -20,17 +23,6 @@ An experimental Retrieval-Augmented Generation (RAG) workflow that builds an int
 6. If any relevant documents remain → generate answer using RAG prompt (`hub.pull('rlm/rag-prompt')`).
 7. Else → rewrite the query (`QUESTION_REWRITER_PROMPT`) and perform Tavily web search.
 8. Generate final answer from search results.
-
-Graph nodes (simplified):
-```
-[get_model] -> [build_vector_store] -> [get_relevant_documents] -> [grade_and_filter_documents]
-                                                  | (if none relevant)
-                                                  v
-                                             [transform_query] -> [perform_web_search]
-                                                  \
-                                                   v
-                                      [generate_answer_from_documents] -> END
-```
 
 ## Requirements
 See `requirement.txt` (minimal set). Install with:

@@ -5,7 +5,8 @@ GRADE_DOCUMENTS_PROMPT = """
     Give a binary score 'yes' or 'no' score to indicate whether the document is relevant to the question.
 """
 
+
 QUESTION_REWRITER_PROMPT = """
     You a question re-writer that converts an input question to a better version that is optimized \n 
     for web search. Look at the input and try to reason about the underlying semantic intent / meaning.
-"""
+""" 
